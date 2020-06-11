@@ -1,0 +1,132 @@
+.ContactMe {
+    $self: &;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    @include media-query($medium-up) {
+        flex-flow: row;
+    }
+
+    &__btn {
+        background-color: #15dfbc;
+        border-radius: 30px;
+        border: 2px solid #15dfbc;
+        color: black;
+        font-weight: 700;
+        font-size: 1.6em;
+        padding: 5px 15px;
+        transition: all .3s ease-in;
+        z-index: 20;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: white;
+        }
+
+        &.-hidden {
+            opacity: 0;
+        }
+
+        &.-show {
+            animation-fill-mode: forwards;
+
+            &.-head {
+                animation-name: fadeDown;
+            }
+
+            &.-footer {
+                animation-name: fadeUp;
+            }
+
+            animation-duration: 2s;
+        }
+
+    }
+
+    @keyframes fadeUp {
+        0% {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeDown {
+        0% {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    &__hiddenMenu {
+        background-color: #15dfbc;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        height: 100%;
+        flex-flow: column;
+        align-items: center;
+        transition: transform .3s cubic-bezier(0.77, 0.2, 0.1, 1);
+
+        @include media-query($small) {
+            @include visually-hidden;
+        }
+
+        @include media-query($medium-up) {
+            position: absolute;
+            flex-flow: row;
+            justify-content: space-between;
+            width: 85%;
+            transform: scaleX(0)
+        }
+
+        &.-show {
+
+            @include media-query($small) {
+                @include visually-shown;
+                margin: 15px;
+                padding: 15px;
+            }
+
+            @include media-query($medium-up) {
+                transform: scaleX(1)
+            }
+        }
+    }
+
+    &__links,
+    &__email {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        padding: 0 10px;
+        color: #000;
+
+        &:visited,
+        &:active {
+            color: #000;
+        }
+
+        &:hover {
+            color: #EE4266;
+        }
+
+    }
+}

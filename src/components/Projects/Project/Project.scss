@@ -1,0 +1,45 @@
+.Project {
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: overlay;
+
+    &__link {
+        display: inline-block;
+        font-size: inherit;
+        text-decoration: none;
+        width: fit-content;
+        margin: 0 10px;
+        padding: 5px 10px;
+        font-weight: 700;
+        background-color: #15dfbc;
+        color: #000;
+        border-radius: 30px;
+        transition: all .3s ease-in-out;
+
+        &:visited,
+        &:active {
+            color: #000;
+        }
+
+        &:hover {
+            background-color: black;
+            color: #15dfbc;
+            transform: scale(0.9, 0.9);
+        }
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
