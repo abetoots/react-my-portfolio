@@ -1,6 +1,6 @@
 {
     "name": "react-wpgraphql-starter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "React starter made to interact with WP GraphQl & WP GraphQl JWT Authentication + SASS & PWA support",
     "scripts": {
         "start": "webpack-dev-server --hot --inline --config webpack.dev.js --open",
