@@ -1,5 +1,5 @@
 //Lazy load all components except the component for root or home
-import Portfolio from "../../core/Portfolio/Portfolio";
+import Portfolio from '../../core/Portfolio/Portfolio';
 
 /**
  * How to use:
@@ -11,11 +11,10 @@ import Portfolio from "../../core/Portfolio/Portfolio";
 //!Do not delete. This serves as a fallback linklist
 export const defaultLinkList = [
   {
-    path: "/",
-    exact: true,
+    path: '/',
     component: Portfolio,
-    label: "Portfolio"
-  }
+    label: 'Portfolio',
+  },
 ];
 
 export const getLinkList = () => {

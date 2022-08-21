@@ -1,16 +1,15 @@
 .SkillSummary {
-    padding: .8rem;
+  padding: 0.8rem;
 
-    &__list {
-        @include media-query($medium-up) {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1rem;
-        }
-
+  &__list {
+    @include media-query($medium-up) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
     }
+  }
 
-    &__listItem {
-        margin-bottom: 1rem;
-    }
+  &__listItem {
+    margin-bottom: 1rem;
+  }
 }

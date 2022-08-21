@@ -1,9 +1,9 @@
 .Projects {
-    &__list {
-        @include media-query($medium-up) {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
-            gap: 15px;
-        }
+  &__list {
+    @include media-query($medium-up) {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, max-content));
+      gap: 15px;
     }
+  }
 }

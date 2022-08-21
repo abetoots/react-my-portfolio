@@ -1,29 +1,8 @@
-import Typography from "typography";
-import USWebDesignStandardsTheme from "typography-theme-us-web-design-standards";
+import Typography from 'typography';
+import elkGlenTheme from 'typography-theme-elk-glen';
+elkGlenTheme.baseLineHeight = 1;
 
-USWebDesignStandardsTheme.googleFonts = [
-  {
-    name: "Dosis",
-    styles: ["300, 400, 500, 700"]
-  },
-  {
-    name: "Open Sans",
-    styles: ["400", "400i", "700"]
-  }
-];
-//lets override the font families, dont forget to add their typefaces in gatsby-browser
-USWebDesignStandardsTheme.headerFontFamily = [
-  "Dosis",
-  "Helvetica",
-  "sans-serif"
-];
-USWebDesignStandardsTheme.bodyFontFamily = [
-  "Open Sans",
-  "Helvetica",
-  "sans-serif"
-];
-
-const typography = new Typography(USWebDesignStandardsTheme);
+const typography = new Typography(elkGlenTheme);
 
 typography.injectStyles();
 
